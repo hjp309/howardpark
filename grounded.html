@@ -12,11 +12,6 @@ body{
 	background-color: white;
 }
 
-img{
-  width: 100%;
-  object-fit: fill;
-}
-
 @font-face { font-family: RobotoBlack; src: url('Fonts/Roboto-Black.ttf')}
 @font-face { font-family: RobotoBold; src: url('Fonts/Roboto-Bold.ttf')}
 @font-face { font-family: RobotoRegular; src: url('Fonts/Roboto-Regular.ttf')}
@@ -88,7 +83,8 @@ img{
 
 p{
   font-size: 20px;
-  margin-bottom: 3vh;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
 }
 
 ul{
@@ -103,6 +99,26 @@ h1{
 h3{
   font-family: RobotoBold;
   font-size: 30px;
+}
+
+img{
+  width: 100%;
+  margin-top: 1.5vh;
+  margin-bottom: 1.5vh;
+}
+
+.caption i{
+  color: white;
+  font-size: 2.5vh;
+}
+
+.caption{
+  position: relative;
+  width: 100%;
+  height: 100;
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 
 .bodytext{
@@ -197,17 +213,152 @@ h3{
       </a>
     </div>
     <div class="contact"><a href="mailto:howard.park@nyu.edu" target="_self">CONTACT</a></div>
-    <div class="resume"><a href="Resume.pdf" target="_self">RESUME</a></div>
+    <div class="resume"><a href="resume.pdf" target="_self">RESUME</a></div>
   </div>
-
-  <img src="Images/Grounded2.bmp" style="position:relative;margin-bottom: 20px;left:0;width:100%;"></img>
 
   <div class="wrap">
     <div class="bodytext">
-      <h1>Overview</h1>
 
+      <div class="caption" style="margin: 0">
+        <img src="Grounded/Grounded2.bmp"></img>
+        <div style="position: absolute; width: 100%; top: 80%;">
+          <i>Dreamlike menu scene teaching players how to grab and move objects, <br>
+            the main mechanic used throughout all puzzles. Doing so will start the game.</i>
+        </div>
+      </div>
 
+      <h1 style="display: inline-block; text-align: left">Overview</h1>
+      <p style="display: inline-block; margin-top: 55px; float: right;"><i><b>Engine:</b> Unity&nbsp&nbsp&nbsp&nbsp<b>Responsibilities:</b> Programming, Puzzle/Level Design</i></p>
+
+      <p>"Grounded" is a virtual reality puzzle game where players are in the shoes of an old, amnesiac farmer who awakens to an audio
+        log of himself explaining the existence of a runaway experiment. Rediscovering the possessions of his now unfamiliar home, the
+        farmer realizes he is trapped and that the only way out is by solving a series of puzzles origianlly designed to contain the beast
+        that is now lurking somewhere near him.
+      </p>
+
+      <div class="caption">
+        <img src="Grounded/Bedroom.png" style="margin: 0"></img>
+        <div style="position: absolute; width: 100%; top: 85%;">
+          <i>Players spawn next to a phonograph that automatically plays the first audio log.
+            Audio logs can be replayed if grabbed and reinserted <br>(Objects in picture are lighter than they appear).</i>
+        </div>
+      </div>
+
+      <p>
+        The project was developed over the course of two months with a friend, who focused on asset building and modeling while I handled programming
+        the mechanics, event triggers, and object interactions. We chose virtual reality as the optimal medium for immersing our audience to
+        environmental storytelling, which complemented our desire to implement a more hands-on approach to our puzzles.
+      </p>
+      <p>
+        Four puzzles
+        exist in the game and each represent a chapter in the story as completing one rewards players with audio logs or clues
+        for the next one. When players are not solving puzzles, they are discovering narrative artifacts placed all around
+        the level to give them a better understanding of what is happening around them. Finding this balance between open-world exploration and
+        narrative progress was an essential feat for development and definitely gave us a stronger understanding of our players
+        through weekly playtest sessions.
+      </p>
+
+      <h1>Controls</h1>
+
+      <p>
+        <br>Left Joystick - Movement
+        <br>Right Joystick - Head turning
+        <br>Right Trigger - Grab object (Use again to drop)
+        <br>
+      </p>
+      <i>Note: These are controls we used for the Oculus Rift and may not translate to every platform.</i>
+
+      <h1>Puzzle Design</h1>
+
+      <p>
+        Designing the puzzles was the most strenuous task as we were juggling the balance of effective puzzle design and a narrative
+        that seamlessly follows that progression. We designed various events to trigger depending on which puzzle was solved to
+        visually and audibly cue narrative progression to the player. Because we were constrained to work with a linear story, we
+        had to work around players accidentally solving certain puzzles out of order by placing significant puzzle fragments in areas
+        where it would be impossible to discover earlier.
+      </p>
+
+      <div class="caption">
+        <img src="Grounded/Wheelpuzzle.png" style="margin: 0"></img>
+        <div style="position: absolute; width: 100%; top: 85%;">
+          <i>Wheel Combination Lock</i>
+        </div>
+      </div>
+
+      <p>
+        For the "Padlock + Painting" puzzle, for example, paintings were scattered
+        all around the house, each with a hidden number that spell out a combination for a lock on a door when put together. Unlocking
+        this door triggers a climactic point in the story, so we had two of the paintings locked away in a room that gets unlocked from
+        an earlier puzzle to prevent players from missing the gradual narrative progression. Several red herrings were also placed to
+        make finding this correlation rather difficult. This didn't solve the problem of players just going through every single
+        combination on the padlock to eventually unlock it and we left it that way for a good reason.
+      </p>
+
+      <div style="width: 100%; height: 100%; text-align: center;">
+        <img src="Grounded/MapViewInGame.png" style="width: 50%; display: inline-block; float: left"></img>
+        <img src="Grounded/MapView.png" style="width: 50%; display: inline-block"></img>
+        <i style="font-size: 18px;">SPOILER: Side by side map view of all puzzles and puzzle pieces, each color-coded to their puzzle</i>
+      </div>
+
+      <p>
+        If you carefully observe where each puzzle's pieces are placed in the map, you will notice that no matter where you path, there is
+        always enough information to tease the existence of a puzzle but not enough to offer a viable solution. Solving the padlock first
+        leads you to a bookcase which can immediately be solved if you realize to place the book in it to reveal the room with a flamethrower.
+        However, you will not be able to make it past the end-game door as there is another lock that needs to be opened. This prompts the
+        existence of a key but does not tell you where it is, saving the satisfying "AHA" moment as a reward for later when discovery of a hammer
+        redirects your attention to a fragile vase from the room you passed by earlier. It was our creed that "good puzzles are about
+        obfuscation, not obscuration". To make a puzzle rewarding, enough information needs to be relayed to reward those who figure
+        it out, not to those who "found the key" or "found the book". Placing a key on the table to a lock in front of is not a satisfying puzzle,
+        but using a padlock of numbers you pieced together from a series of unusually similar paintings is.
+      </p>
+
+      <div class="caption">
+        <img src="Grounded/AllPaintings.png" style="margin: 0"></img>
+        <div style="position: absolute; width: 100%; top: 85%;">
+          <i>Paintings (including red herrings) placed around the house</i>
+        </div>
+      </div>
+
+      <h1>Narrative Approach</h1>
+
+      <p>
+        Though not a popular argument, I believe that there are some aspects of games that make them unreliable mediums for stories.
+        A person's story, once gamified, will not pan out the same for every reader in control and, thus, produces a slightly different
+        narrative each time. What we allow for our stories to compensate for this lack of linearity is the ability to time-travel and alter
+        these circumstances while still abiding by the laws of that universe. Because players are free to explore and free to solve puzzles
+        in any order they want, the narrative is simplified to fragments - triggers and environmental pieces that provide an experience that
+        isn't always intended to players. And that's the price that we had to pay to sustain a proactive puzzle experience that doesn't funnel
+        solutions through a mere "A to B, B to C" progression.
+      </p>
+      <p>
+        Thus, event triggers that activated subtle pieces of the narrative upon puzzle completion are designed to be in no chronological
+        order and are expressive forms of the story. How we decided to project our story is by slowly introducing the experiment the
+        farmer had created. Incorporating some methods of horror, we wanted to make players feel uneased by making the house as
+        eery as possible. This included the lack of windows, dim lighting, very low-pitched ambience, and a claustrophobic house design that
+        has exploration eventually come to a dead-end after a dedicated amount of time. As for the presence of life, we went for the "breathing
+        house" feel where occasional noises will prompt players to look over their shoulder and subtle changes in the environment will have
+        players questioning their sanity. The more triggers activated, the more these sorts of things would happen. However, we wanted to
+        ensure that players ended the game satisfied, so we decided not to put in any jump-scares and, instead, hold the feeling of the potential
+        existence of one which was honestly more effective if anything. In the end, we had fun doing this and we learned that fear functions
+        in very different ways.
+      </p>
+
+      <h1>Problems with VR and my future with it</h1>
+
+      <p>
+        One of the biggest problems that we failed to overlook was how much motion sickness affects quality gameplay experiences. During
+        most playtest sessions, there were people that were not able to get passed the second or third puzzle due to the amount of time it
+        took being plugged in and the lower threshold for newer VR users. A lot of this problem had to do with the fluctuating frame rates
+        as we were using weaker machines, and the fact that movement had to be simulated by joystick rather than the player's actual feet.
+        The amount of wires needed to use the Oculus Rift also made it dangerous for users to use their actual heads to turn around which
+        exacerbated the issue when we decided to use the right joystick for head turning as the replacement. There were many ways we could've
+        suppressed the problem, but ultimately there wasn't a viable solution that would make not using virtual reality at all a reasonable one.
+        There are many iterations that I'd like to try for VR controls in the future should the time come where I could get my hands on one again.
+        But until then, I've used this experience as a learning lesson that user experience starts the moment they touch the controller.
+      </p>
     </div>
+
+
 
     <div class="footer">
       <div class="alignleft"><a href="prophecyschosen.html">PREVIOUS</a></div>
