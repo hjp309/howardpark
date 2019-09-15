@@ -3,7 +3,6 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <title id="title">Howard Park Portfolio</title>
 <style>
   .navbar{
@@ -151,7 +150,7 @@
     text-align: center;
     background-color: white;
     width: 100%;
-    height: 50vh;
+    height: 30vh;
   }
 
   img{
@@ -170,9 +169,7 @@
 <script>
   function resizeGrid(){
     console.log("Resized");
-    if(document.body.clientWidth >= 1400){
-      gridcontainer.style.gridTemplateColumns = "auto auto auto";
-    }else if(document.body.clientWidth >= 900){
+    if(document.body.clientWidth >= 950){
       gridcontainer.style.gridTemplateColumns = "auto auto";
     }else{
       gridcontainer.style.gridTemplateColumns = "auto";
@@ -187,10 +184,7 @@
     }
   };
 
-  $(document).ready(function() {
-    resizeGrid();
-  });
-
+  window.onload = resizeGrid;
   window.onresize = resizeGrid;
 </script>
 </head>
@@ -225,17 +219,7 @@
     </div>
     <div class="grid-item">
       <a href="tandononline.html" target="_self">
-        <video src="cranegamedemo.mp4" type="video/mp4" autoplay muted loop></video>
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="aroundthehouse.html" target="_self">
-        <img src="AroundTheHouse/AroundTheHouse01.png"></img>
-      </a>
-    </div>
-    <div class="grid-item">
-      <a href="superluminal.html" target="_self">
-        <img src="SuperLuminal/SuperLuminal01.png"></img>
+        <video src="TandonOnline/CraneGameDemo.mp4" type="video/mp4" autoplay muted loop></video>
       </a>
     </div>
   </div>

@@ -148,7 +148,7 @@ h3{
 }
 
 .caption i{
-  color: white;
+  color: black;
   font-size: 100%;
 }
 
@@ -159,6 +159,17 @@ h3{
   text-align: center;
   margin-top: 5vh;
   margin-bottom: 5vh;
+}
+
+video{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  padding: 2px;
+  background-color: black;
+}
+
+strike{
+  font-family: RobotoBold;
 }
 
 </style>
@@ -191,22 +202,116 @@ h3{
       <p style="display: inline-block; margin-top: 60px; float: right"><i><b>Engine:</b> Unity&nbsp&nbsp&nbsp&nbsp<b>Responsibilities:</b> Full development</i></p>
 
       <p>
-        I spent the whole summer of 2018 working for Tandon Online as a student game developer where my job was to create an online
-        game that teaches online graduate students the importance of organizational behavior.
+        I was recruited as a solo game developer at Tandon Online during my junior year to build an educational tool for an NYU
+        professor. The objective was to demonstrate through gameplay the importance of organizational behavior to online
+        graduate students from all over the world. My responsibility as the sole member of the company to have any experience
+        building games was to devise a game where players are incentivized to cooperate, communicate, and compromise to
+        reach an objective as a team.
       </p>
 
-      <div class="caption" style="margin-top: 2vh; margin-bottom: 0;">
-        <video src="cranegamedemo.mp4" type="video/mp4" style="width: 100%" autoplay muted loop></video>
-        <div style="position: absolute; left: 15%; width: 70%; bottom: 10%;">
-          <i>Puzzle 1 </i>
-        </div>
-      </div>
+      <p>
+        The project was scrapped towards the end of development as a result of the company lacking sufficient resources
+        to sustain a dedicated server that could handle the bandwidth of a whole class of students. It was my first experience
+        learning about clients/servers, hosting games through virtual machines, and networking game objects. It was also my first
+        time building a game with practical purpose, where user interface and information claity was prioritized more than
+        interesting mechanics and reward systems favored to an individual.
+      </p>
+
+      <h1>Gameplay</h1>
+
+      <p>
+        Players each control one of four cranes on each corner of the board with a spawner that periodically produces blocks that match their color.
+        To earn points, players must produce tall, sturdy structures by stacking blocks in the center using only their own colored blocks.
+        Blocks that touch other blocks of the same color will be destroyed which means players must ensure that each block is touching
+        a different player's to avoid losing points. Points are also rewarded as a team and based on <b>how tall the tallest structure is</b>
+        as well as the <b>number of blocks used</b> with the former earning 33% more points. In 5 minutes, each team is to earn as many points
+        possible, which are then compared to other teams to determine cooperative power and teamplay.
+      </p>
+
+      <h1>Controls</h1>
+      <p>
+        WASD - Move Crane
+        <br>SPACE - Pickup/Drop Blocks
+      </p>
+
+
+      <h1>Development</h1>
+      <h3 style="margin: 0">First Prototype</h3>
+      <video src="TandonOnline/CraneGameInitialPrototype.mp4" type="video/mp4" style="width: 100%;" autoplay muted loop></video>
+
+      <p>
+        The first two week centered around developing the crane which was initally controlled with two sets of controls: one for
+        turning the crane and the other for controlling the hook. The blocks were also designed to have different characteristics:
+      </p>
+
+      <ul>
+        <li style="color: gray">Regular Blocks (Standard, 1 x 1)</li>
+        <li>Heavy Blocks (Double mass, 0.5 x 0.5)</li>
+        <li style="color: Skyblue">Glass Blocks (Destructible, 1 x 1)</li>
+        <li style="color: Red">Balloon Blocks (Explode when "agitated", 1 x 1)</li>
+      </ul>
+
+      <p>
+        These blocks were to be placed on the central platform that balances on an axle which required players to consider the weight
+        and integrity of each structure they made to avoid having them fall.
+
+        These blocks were eventually swapped with standard blocks of varying sizes because gameplay was more chaotic and distracting
+        than intended. At this point in development, radical changes were advised to ensure that gameplay is minimized to a teaching
+        tool than a sandbox for creative destruction. Though it was fun playing around with it..
+      </p>
+
+      <h3 style="margin: 0">Alpha Build</h3>
+
+      <p>
+        Thus led to the development of the alpha showcased below. No crazy mechanics or explosive mayhem. <b>Just Jenga.</b>
+      </p>
+
+      <video src="TandonOnline/CraneGamePrototype2.mp4" type="video/mp4" style="width: 100%" autoplay muted loop></video>
+
+      <p>
+        At this point in development, I realized the overall feel and look of the game. Because my game is presumed to be played
+        by a non-gamer audience, I had to prioritize the information clarity and simplify controls so that it did not require
+        previous gaming experience. So the following changes were made:
+        <ul>
+          <li>Players control <strike>crane and hook</strike> a hook.</li>
+          <li>Light source aimed down so hooks cast shadow (visual aid).</li>
+          <li><strike>See-saw platform</strike> Caved-in platform in the center.</li>
+          <li><strike>Players can control all blocks</strike> Blocks color-coded to specific player.</li>
+          <li><strike>Blocks have different powers</strike> Blocks all standard and only change in size.</li>
+          <li>"Drop-line" sprite: <strike>animated polkadots</strike> blue-to-white gradient.</li>
+          <li><strike>Hooks can reach anywhere on the board</strike> Hooks fixed to one quadrant of the board.</li>
+        </ul>
+      </p>
+
+      <p>
+        The game was also networked so two players could play together.
+      </p>
+
+      <h3>Beta</h3>
+      
+      <video src="TandonOnline/CraneGameDemo.mp4" type="video/mp4" style="width: 100%" autoplay muted loop></video>
+
+      <p>
+        By the third month of development, the beta build was finally networked and completed with a lobby where up to four players
+        could connect, choose a color, and play together. There were is some lag that occurs, but the game itself functions perfectly
+        and essentially every player sees and interacts with the same board. Below is a demo of the shipped build with four players
+        attempting the game for the first time. It's essentially a more polished version of the alpha, but the following things were
+        implemented:
+
+        <ul>
+          <li>Network Lobby</li>
+          <li>"Integrity" and "Score"</li>
+          <li>Timer (5 minutes)</li>
+          <li><strike>Two block spawners total</strike> Block spawners for each player</li>
+        </ul>
+      </p>
+
     </div>
 
     <div class="footer">
       <div class="alignleft"><a href="hrmdvr.html">PREVIOUS</a></div>
       <div class="aligncenter"><a href="#top" style="color: #000080; text-decoration: none">TOP</a></div>
-      <div class="alignright"><a href="aroundthehouse.html">NEXT</a></div>
+      <div class="alignright">&nbsp</div>
     </div>
   </div>
 
