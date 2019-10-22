@@ -32,6 +32,7 @@ img{
 p{
   font-size: 20px;
   margin-bottom: 3vh;
+  line-height: 30px;
 }
 
 ul{
@@ -48,11 +49,6 @@ h3{
   font-size: 30px;
 }
 
-.grounded{
-  width: 100%;
-  height: 100%;
-}
-
 .header{
   position: relative;
   background-color: white;
@@ -60,7 +56,7 @@ h3{
   padding-top: 40px;
   padding-right: 7vw;
   margin-left: 7vw;
-  padding-bottom: 2vh;
+  padding-bottom: 1vh;
 
   font-size: 1.2vw;
   font-family: RobotoBold;
@@ -72,6 +68,7 @@ h3{
 .header a{
   text-decoration: none;
   color: black;
+  font-size: 1.5vw;
 }
 
 .name{
@@ -105,8 +102,7 @@ h3{
 
   letter-spacing: 2px;
   margin-top: 2vh;
-  margin-right: 3vw;
-  padding: 10px;
+  padding: 1vw;
 }
 
 .contact{
@@ -114,8 +110,18 @@ h3{
   float: right;
 
   letter-spacing: 2px;
+  margin-right: 1.5vw;
   margin-top: 2vh;
-  padding: 10px;
+  padding: 1vw;
+}
+
+.aboutme{
+  display: inline-block;
+  float: right;
+
+  letter-spacing: 2px;
+  margin-top: 2vh;
+  padding: 1vw;
 }
 
 .wrap{
@@ -154,6 +160,8 @@ h3{
   text-align: right;
 }
 
+#more {display: none;}
+
 </style>
 
 <body>
@@ -166,30 +174,33 @@ h3{
     </div>
     <div class="contact"><a href="mailto:howard.park@nyu.edu" target="_self">CONTACT</a></div>
     <div class="resume"><a href="resume.pdf" target="_self">RESUME</a></div>
+    <div class="aboutme"><a href="aboutme.html" target="_self">ABOUT ME</a></div>
   </div>
 
   <img src="ProphecysChosen/ProphecysChosenInverted.jpg" style="position:relative;margin-top:20px;left:25%;width:50%;"></img>
 
   <div class="wrap">
     <div class="bodytext">
-
       <h1 style="display: inline-block; text-align: left">Overview</h1>
       <p style="display: inline-block; margin-top: 60px; float: right"><i><b>Engine:</b> Unity&nbsp&nbsp&nbsp&nbsp<b>Responsibilities:</b> Full development</i></p>
       <p>
-        “Prophecy’s Chosen” is a 2D dungeon crawler game and passion project solely developed on Unity over the course of four months during my senior year at New York University.
+        “Prophecy’s Chosen” is a 2D dungeon crawler game I am currently developing where players are alternating between 3 characters while developing synergies
+        between them to fight monsters and solve puzzles.
       </p>
       <p>
-        In “Prophecy’s Chosen”, you control the soul of a child summoned by three powerful guardians who prophesy the forthcoming of a hero upon completion of a perilous journey in a ravenous dungeon. You are granted the choice to inherit one of the guardian’s powers that increase his/her survivability, lethality, or mobility, but there’s a catch. Bound to the prophecy is a rule: “the three guardians are not only to aid in the hero’s journey but also contracted to protect the child with their very lives. Should a guardian succeed to do so, the remaining guardians are to follow suit.”
+        Technically speaking, it's a game where the player controlled object is updating local variables such as mass, speed, color, etc.
+        from a Guardian class. Each Guardian's abilities are inherited, thus, allowing the player to essentially BE that Guardian, which
+        changes attack patterns and interactions depending on the chosen Guardian.
       </p>
+
       <p>
-        The goal was to develop a game that creates situations where players would have to alternate or choose between conventional attack, move, and defend mechanics but not altogether. The targeted demographic was a more competitive audience as perma-death mechanics and difficult obstacles incentivize more strategic awareness of min-maxing mechanics and synergies.
+        As of now, I've achieved the following:
       </p>
-      <p>
-        As the sole programmer and designer, it was my responsibility to test the efficiency of this idea into a playable experience that players can use to provide reliable criticisms and feedback. By the end of May, the game was playtested and <a style="font-family: RobotoBold;" href="http://sites.bxmc.poly.edu/~ifeoluwalawal/projectProfiles/Howard%20Park.html">showcased</a> amongst hundreds of people where overall reception was met with praise on minimal bugs and optimism for the game’s future.
-      </p>
-      <p>
-        Some personal achievements include the implementation of modular enemy prefabs and scripts for simple enemy creation and diversity, intuitive controls and movement, adaptive level design, and visual designs that identify characters with minimal art.
-      </p>
+      <ul>
+        <li>An organized Player / Guardian class inheritence system using OOP.</li>
+        <li>Dynamic Character Creation from abstract classes.</li>
+        <li>Basic Enemy AI with attack patterns guaged by an "Aggression" meter.</li>
+      </ul>
 
       <iframe src="https://www.youtube.com/embed/xtRnFIlgFVc?&loop=1/" height="473" frameborder="0" style="position:relative; left:20%; width:60%" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
@@ -202,76 +213,61 @@ h3{
         <br>1 - Switch to Estelle
         <br>2 - Switch to Aiden
         <br>3 - Switch to Evangeline
-        <br>
       </p>
 
       <h1>Guardians</h1>
 
       <p>
-      All guardians have their own health bar, ability, and movement, each balanced according to their strengths in survivability, lethality,
-      and mobility. When I say the child is inheriting the guardian's powers, I mean it from a programming perspective as well. All variables and functions
-      for each guardian's health, ability, and movement are publicly referenced by the child object, allowing the player to essentially play as that
-      guardian seamlessly. This makes it convenient for guardian death which is a simple matter of shutting off that script, leaving the child object
-      with its own health bar, no abilities, but high mobility. The reason for this is to reward players who continue to progress by spawning shrines
-      deeper into the level that allow the revival of one fallen guardian.
+      All guardians are balanced according to their strengths in <b style="color: #e38ddd">survivability</b>,
+      <b style="color: #d40000">lethality</b> and <b style="color: #32b505">mobility</b>.
       </p>
 
-      <h3 style="color: #e38ddd">Estelle</h3>
+      <h3 style="color: #e38ddd">Estelle (Survivability)</h3>
       <p>
       Estelle is a gentle, motherly figure whose motivation to protect the prophecy's chosen comes from her will to preserve all creations of God.
 
-      When inheriting Estelle's powers, the child is given a lateral charge ability that immediately activates <b>defense mode</b> for a brief period.
+      When inheriting Estelle's powers, the child is able to ram enemies and activate <b style="color: #e38ddd">defense mode</b> which absorbs
+      damage from an enemy into a decaying shield and explodes on impact. This deals enough damage to shove enemies
+      away in a large radius, but not enough to kill.
 
-      During defense mode, the child inherits Estelle's draining ability which absorbs damage from the first collided enemy into a decaying shield before
-      exploding on impact, shoving and damaging other nearby enemies.
-
-      The shield persists even after switching to another guardian until it fully decays. Defense mode will also persist if the child doesn't collide
-      with an enemy, but will still release an explosion after some time.
+      The shield persists and explodes even when switching Guardians, allowing her to provide <b style="color: #e38ddd">survivability</b>
+      to <b style="color: #d40000">Aiden</b> and <b style="color: #32b505">Evangeline</b> that lack it.
       </p>
 
       <p>
-      As a guardian specialized in <b>survivability</b>, Estelle is designed with defensive mechanics with limited offensive and mobile potential.
+      As the guardian of <b style="color: #e38ddd">survivability</b>, Estelle is designed with defensive mechanics with limited offensive and mobile potential.
       </p>
 
       <iframe src="https://www.youtube.com/embed/0WRV3iKj5_A?&loop=1/" height="473" frameborder="0" style="position:relative; left:20%; width:60%" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-      <h3 style="color: #d40000">Aiden</h3>
+      <h3 style="color: #d40000">Aiden (Lethality)</h3>
       <p>
-      Aiden is a brutish warrior who believe certain creations are not perfect visions of God and must thoroughly be punished. He adopts the
-      primal instinct to attack mindlessly.
+      Aiden is a brutish warrior who adopts a more primal approach to obstacles by smashing them with his hammer.
 
-      To inherit his raw strength, the child must learn to not fear mortality as each swing of his awesome Hammer of Wrath not only sends enemies
+      To inherit the raw strength of his awesome Hammer of Wrath means to not only send enemies
       flying, but also himself, making it useful for climbing towering structures. Should enemies dare to stand in the way of the prophecy,
       they are to first make it past Aiden's divine judgement.
       </p>
 
       <p>
-      Aiden was designed to follow the conventional desire to measure progress through raw killing power, or <b>lethality</b>. Low health and
-      mobility was an appropriate counter-balance to both the game and his character as he is meant to played recklessly. Coupling his strength
-      with Estelle's shield is heavily recommended in min-maxing the child's survivability and lethality.
+      Aiden is designed to follow the conventional desire in action games to kill and destroy. Low <b style="color: #e38ddd">survivability</b> and
+      <b style="color: #32b505">mobility</b> became an appropriate counter-balance as a drawback to his reckless playstyle.
       </p>
 
       <iframe src="https://www.youtube.com/embed/qxgQT24vrzs?&loop=1/" height="473" frameborder="0" style="position:relative; left:20%; width:60%" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-      <h3 style="color: #32b505">Evangeline</h3>
+      <h3 style="color: #32b505">Evangeline (Mobility)</h3>
       <p>
-        Evangeline is a curious adventurer and God's journalist who finds solace learning about God's world. Exploring all walks of life, she
-        takes advantage of her agile movement, double-jump and night vision to make up for her low vitality. She also brandishes a handcrafted
-        bow and quiver with confidence despite having minimal combat experience. Manufactured from the finest raw materials that God has to offer,
-        Evangeline's arrows do not kill, but are infused with energy that allows her to see through them. Every arrow she shoots is another eyeball,
-        allowing her to study her surroundings and hostilities. When enemies are in range of or hit by her arrows, she attains <b>True Sight</b>,
-        exposing their position, weak points, and potential <b>curses</b>. Attacking the exposed weak points will extremely increase damage output,
-        especially with Aiden's hammer. To be humbled by God's gift and inherit these powers is a privilege even for the prophesied hero.
+        Evangeline is God's journalist, an adventurer who finds solace in discovering relics, new monsters, and finding treasures. She
+        takes advantage of her <b>agility, double-jump and night vision</b> to make up for her <b style="color: #e38ddd">low survivability</b>.
+        She is equipped with a <b style="color: #d40000">non-lethal</b> bow and arrow, which lights pathes and detects enemy weaknesses and <b>curses</b>.
+        Attacking exposed weak points will deal insane damage, which works incredibly well with <b style="color: #d40000">Aiden's Hammer</b>.
       </p>
 
       <p>
-        Evangeline is definitely one of the more ambitious characters and designs in the game as the desired playstyle for her isn't as conventional as
-        defending or attacking. Initially her role was to be a characterized tutorial, offering her "knowledge of the world"
-        to the player in a seamless and more narrative fashion. This idea was eventually scrapped, however, as I preferred players to take a more
-        hands-on approach to learning the mechanics rather than having a persisting character explicitly explain it. To make <b>mobility</b> feel as empowering
-        as the conventional attack and defend mechanics, I added <b>curse</b> mechanics and a "look" feature that allows you to check your surroundings
-        by mouse to complement her night vision and arrow play. These features allow players not only to gain preemptive knowledge of obstacles hidden
-        in the dark, but also adds a layer of counterplay and strategy that only Evangeline could supply.
+        Evangeline is more of a support and excels at providing critical knowledge of incoming threats that <b style="color: #e38ddd">Estelle</b> or
+        <b style="color: #d40000">Aiden</b> would not be aware of. Her strength is not only <b style="color: #32b505">mobility</b> but also
+        <b style="color: #32b505">knowledge</b>.
       </p>
 
       <iframe src="https://www.youtube.com/embed/Qi74UaEt4-8?&loop=1/" height="473" frameborder="0" style="position:relative; left:20%; width:60%" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -279,38 +275,43 @@ h3{
       <h1>"Curse" Mechanic</h1>
 
       <p>
-        "Curses" are debuffs that the child and guardians can be inflicted by when taking damage from enemies. They can be blocked by Estelle's
-        active shield or temporarily nullified by switching to another guardian (unless LOCKED or SWITCHED). Debuffs can stack if players are hit
-        by multiple enemies with different debuffs or have its hidden timer reset if hit by the same debuff.
+        "Curses" are debuffs that individual Guardians can be inflicted with when taking damage from enemies. They can be blocked by Estelle's
+        shield or sometimes temporarily nullified by switching to another guardian (unless LOCKED or SWITCHED). Different debuffs can stack from
+        multiple enemies and consistent damage can reset a debuff's timer if hit by the same debuff.
       </p>
 
       <ul>
-        <li>NONE:         No debuff</li>
-        <li>LOCKED:       Current guardian cannot be changed</li>
-        <li>SWITCH:       Force swaps current guardian to a random active guardian</li>
-        <li>HALF HEALTH:  Immediately halves current guardian health</li>
-        <li>HEAVY BODY:   Dramatically increases the mass of current guardian</li>
-        <li>BLIND:        Turns off parented lights, dramatically reducing vision</li>
+        <li><b>NONE:</b>         No debuff</li>
+        <li><b>LOCKED:</b>       Current guardian cannot be changed</li>
+        <li><b>SWITCH:</b>       Force swaps current guardian to a random active guardian</li>
+        <li><b>HALF HEALTH:</b>  Immediately halves current guardian health</li>
+        <li><b>HEAVY BODY:</b>   Dramatically increases the mass of current guardian</li>
+        <li><b>BLIND:</b>        Turns off parented lights, dramatically reducing vision</li>
       </ul>
 
-      <h1>Enemy Creation and "Maralith" Boss</h1>
+      <h1>Enemy AI and "Maralith" Boss</h1>
 
       <p>
-        Though enemies each get only one debuff (including NONE) and hidden duration, they can be designed to detrimental effect due to their
-        modular makeup. Enemies are created from a single block prefab with a movement and collision script. The movement script
-        takes in an "aggression level" variable from 1-10, which controls an enemy's likeliness to detect and chase a player as well as the rate
-        of change in its idle movement. This allows me to create weaker but more agile "zerglings" with a high aggression level, or slower but
-        stronger "elites" with a lower aggression level. This coupled with a collision script that gives me full access to its damage, rigidbody,
-        health, and debuff type allows me to create a diverse cast of enemies and even bosses.
+        Enemies are created from a single block prefab with a <b>movement</b> and <b>collision</b> script.
       </p>
       <p>
-        Towards the end of the prototype video, you get to witness a boss fight with "Marilith", a powerful, six-armed demon designed in homage to
-        its origin in <i>Dungeons and Dragon</i>. Its arms are composed of five "elite" enemies each equipped with one of the five debuffs and a
-        sixth being an invulnerable weak spot that exposes Maralith's health bar once all five arms are destroyed. In the beginning, Maralith
-        will simply creep towards the player, but as each arm gets destroyed, the remaining arms begin to spin faster and Maralith's aggression level
-        also begins to increment. As one can tell already, Maralith main body is also an enemy block prefab, but is modulated to instead be circular
-        with a separate script managing the arms. Maralith tests players' ability to use <b>survivability, lethality,</b> and <b>mobility</b>
-        in rapid succession to capitalize synergistic elements.
+        The movement script takes an <b>"aggression level"</b> that sets an enemy's likeliness to chase and look for the player.
+        while the collision script gives me access to <b>debuffs, speed, knock-up, and damage</b>. Tinkering with these variables
+        allows me to easily create a diverse cast of enemies and even my first boss, <b style="color:purple">Maralith</b>, which can be seen at the end of
+        the prototype video above.
+      </p>
+
+      <p>
+        <b style="color:#c500d6">Maralith</b> is a powerful, six-armed demon inspired from the one in <i>Dungeons and Dragon</i>.
+        Its arms are composed of five larger enemies, each equipped with one of five debuffs and a
+        sixth being an invisible weak spot that only <b style="color:#32b505">Evangeline</b> can see.
+        To kill the boss, the player must destroy all five "arms" before destroying the body. In the beginning, Maralith
+        will simply creep towards the player, but as each arm gets destroyed, the arms will spin faster and increment her aggression level.
+      </p>
+      <p>
+        Building Maralith was the simple task of writing one script and parenting prefabs together.
+        <b>Out of more than 50 playtesters, only 2 have been able to defeat it. Only players that harnessed all three elements
+        have defeated it.</b>
       </p>
 
       <img src="ProphecysChosen/ProphecysChosenSynergies.jpg" style="position:relative;margin-top:20px;left:10%;width:75%;"></img>
@@ -318,7 +319,9 @@ h3{
         <i style="position:relative; left: 10%; font-size: 75%">Diagram framing some possible synergies</i>
       </p>
 
-      <h1>Reception and Takeaways</h1>
+      <h1>Reception, Takeaways, Feedback</h1>
+      <p><b>TL;DR: Players enjoyed the game, but felt the Guardians needed to be more independent. I am currently revamping the
+        Guardian's mechanics and abilities.</b></p>
       <p>
         There was a very interesting comprehension of the game's mechanics based on how experienced a player was in gaming. Non-gamers
         overall praised the game's functionality, quality, endearing mechanics, and tag-team concept, but expressed difficulty
@@ -350,38 +353,23 @@ h3{
         improved to engage characters without it feeling so troublesome.
       </p>
 
-      <h1>Future Changes</h1>
-
       <p>
-        For my game to truly reach this final form, I decided to translate these criticisms to solutions - an overhaul
-        to Estelle, Aiden, and Evangeline's mechanics that realizes their individual strengths while still assessing
-        their weaknesses. This can be done by devising a combat system that allows each guardian to shine while adding optional
-        synergistic elements to incentivize an alternative combo play. The image below shows a possible skill "tree" underway for
-        implementation and testing. To be rewarded points to add to the tree, players must complete specific objectives or complete
-        levels. Because it behaves differently from the conventional skill tree, I've used electric circuits as a theme to make it
-        easier to understand. Points can be plotted anywhere as long as they're "connected" by a thin solid line. The dashed
-        lines are "transistors" which are unconnected until all previous points are filled in, which it will then turn thin and solid.
-        This means that in order for a player to unlock the colorful star, which drastically empowers a guardian and unlocks a new
-        mechanic, all three previous points will have to be filled in. Doing this, however, will also unlock a "resistor", a thick
-        solid line that breaks all touching connections. This is also where the major breaking point is for players to decide whether
-        they want to focus on individual guardian strengths or their synergies. As displayed on the tree, there are two directions
-        each corner can go: towards the center or towards another corner. Connecting the transistors on the sides will bring the
-        player closer to unlocking "God Mode", which combines all guardian powers into a single guardian that harnesses all three
-        of their powers. Alternatively, players can connects towards the stars to not only keep all three guardians, but also allow
-        them to maximize the potential of each guardian. Neither playstyle is wrong and, so, it is important that in implementation
-        that I guage the power balance of both sides.
+        For my game to truly reach this final form, I am working to revamp Estelle, Aiden, and Evangeline's mechanics to ones that
+        realizes their individual strengths. I am currently devising a combat system that allows players to choose between
+        synergies or prioritizing one Guardian. Below is a rough "skill tree" underway I am testing.
       </p>
 
       <img src="ProphecysChosen/ProphecysChosenSkillTree.jpg" style="position:relative;margin-top:20px;left:10%;width:75%;"></img>
+
       <p>
-        <i style="display; left: 10%; font-size: 75%">A theory crafted skill tree for potential implementation</i>
-      </p>
+        To add points, players must complete varying objectives for each Guardian or complete levels. Objectives are based on
+        each Guardian's playstyle and will offer a choice for players to go above-and-beyond to progress all Guardian synergies
+        (more points required) or more casually and focus on a single one (plotting a star on each corner).
 
       <p>
         I hope to see how this turns out and will update accordingly. Additional feedback and criticisms is greatly appreciated and can
         be forward through my contacts tab above. Thank you for your time and cooperation reading this as I know it was a long read.
-        However, I also feel that voiding my thought process and creative approach will allow me to redefine quality for the future as
-
+        However, I also feel that voiding my thought process and creative approach will allow me to redefine quality for the future.
       </p>
     </div>
 
