@@ -4,166 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <title id="title">Tandon Online</title>
-<style>
-
-body{
-  margin: 0;
-  padding: 0;
-	background-color: white;
-}
-
-img{
-  width: 90%;
-  object-fit: fill;
-}
-
-@font-face { font-family: OpenSansRegular; src: url('Fonts/OpenSans-Regular.ttf')}
-@font-face { font-family: OpenSansBold; src: url('Fonts/OpenSans-Bold.ttf')}
-@font-face { font-family: OpenSansSemiBold; src: url('Fonts/OpenSans-SemiBold.ttf')}
-
-.header{
-  position: relative;
-  background-color: white;
-
-  padding-top: 40px;
-  padding-right: 7vw;
-  margin-left: 7vw;
-  padding-bottom: 2vh;
-
-  font-size: 1.2vw;
-  font-family: OpenSansSemiBold;
-  color: black;
-
-  height: auto;
-}
-
-.header a{
-  text-decoration: none;
-  color: black;
-}
-
-.name{
-  display: inline-block;
-  text-align: left;
-  width: 30vw;
-  padding-top: 10px;
-}
-
-.name h1{
-  letter-spacing: .45vw;
-
-  font-family: OpenSansBold;
-  font-weight: normal;
-  font-size: 3vw;
-
-  color: #000080;
-  margin: 0;
-}
-
-.name h3{
-  letter-spacing: .4vw;
-  font-size: 1vw;
-  color: black;
-  margin: 0;
-}
-
-.resume{
-  display: inline-block;
-  float: right;
-
-  letter-spacing: 2px;
-  margin-top: 2vh;
-  margin-right: 3vw;
-  padding: 10px;
-}
-
-.contact{
-  display: inline-block;
-  float: right;
-
-  letter-spacing: 2px;
-  margin-top: 2vh;
-  padding: 10px;
-}
-
-p{
-  font-size: 20px;
-  margin-bottom: 3vh;
-}
-
-ul{
-  font-size: 20px;
-}
-
-h1{
-  font-family: OpenSansBold;
-  font-size: 50px;
-}
-
-h3{
-  font-family: OpenSansSemiBold;
-  font-size: 30px;
-}
-
-.bodytext{
-  color: black;
-  margin-bottom: 150px;
-  font-family: OpenSansRegular;
-}
-
-.wrap{
-  width: 70%;
-  position: absolute;
-  left: 15%;
-}
-
-.alignleft{
-  float: left;
-  width: 33.33%;
-  text-align: left;
-}
-
-.aligncenter{
-  float: left;
-  width: 33.33%;
-  text-align: center;
-}
-
-.alignright{
-  float: left;
-  width: 33.33%;
-  text-align: right;
-}
-
-.footer{
-  font-family: OpenSansSemiBold;
-  font-size: 2vw;
-
-  height: 12vh;
-}
-
-.footer a{
-  text-decoration: none;
-  color: #000080;
-}
-
-.caption i{
-  color: white;
-  font-size: 100%;
-}
-
-.caption{
-  position: relative;
-  width: 100%;
-  height: 100;
-  text-align: center;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-}
-
-</style>
-
-
+<link rel="stylesheet" href="stylesheet_page.css">
 </head>
 
 <body>
@@ -175,7 +16,8 @@ h3{
       </a>
     </div>
     <div class="contact"><a href="mailto:howard.park@nyu.edu" target="_self">CONTACT</a></div>
-    <div class="resume"><a href="Resume.pdf" target="_self">RESUME</a></div>
+    <div class="resume"><a href="resume.pdf" target="_self">RESUME</a></div>
+    <div class="aboutme"><a href="aboutme.html" target="_self">ABOUT ME</a></div>
   </div>
 
   <div class="wrap">
@@ -183,19 +25,21 @@ h3{
       <div class="caption" style="margin-top: 2vh; margin-bottom: 0;">
         <img src="ARWorld/ARWorldBanner.png" style="align: centered"></img>
       </div>
-      <h1 style="display: inline-block; text-align: left">Overview</h1>
-      <p style="display: inline-block; margin-top: 60px; float: right"><i><b>Engine:</b> Unity (iOS), ARKit 4 &nbsp&nbsp&nbsp&nbsp<b>Responsibilities:</b> UX/UI Design, Programming, Prototyping</i></p>
+      <div style="width: 100%">
+        <h1 style="margin-top: 0; margin-bottom: 0px;">Overview
+          <p style="margin: 0;"><i><b style="color:green">Engine:</b> Unity iOS + ARKit 4 <br><b style="color: red">Responsibilities:</b> UX/UI Design, Programming</i></p>
+        </h1>
+      </div>
 
-      <p>"AR World" is an Augmented Reality app that I am currently working on for my internship at Evara VR. My responsibilities as an AR Unity Developer include the implementation of all
-        AR experiences (face tracking, body tracking, object placement, 3D line drawing), programming the "Carousel" UI / experience navigation, and prototyping builds for testing and
-        for pitches to companies like Adult Swim and Irvine Company.</p>
+      <p>"AR World" is an Augmented Reality app that I am currently developing at Evara VR. Below is a video demonstration of our latest functioning prototype,
+      showcasing a variety of AR that </p>
 
       <video src="ARWorld/ARWorldDemo.mp4" type="video/mp4" autoplay muted loop></video>
     </div>
 
     <div class="footer">
       <div class="alignleft">&nbsp</div>
-      <div class="aligncenter"><a href="#top" style="color: #000080; text-decoration: none">TOP</a></div>
+      <div class="aligncenter"><a href="#top">TOP</a></div>
       <div class="alignright"><a href="prophecyschosen.html">NEXT</a></div>
     </div>
   </div>

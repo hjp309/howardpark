@@ -4,223 +4,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <title id="title">Grounded</title>
-<style>
-
-body{
-  margin: 0;
-  padding: 0;
-	background-color: white;
-}
-
-  @font-face { font-family: RobotoBlack; src: url('Fonts/OpenSans-Bold.ttf')}
-  @font-face { font-family: RobotoBold; src: url('Fonts/OpenSans-SemiBold.ttf')}
-  @font-face { font-family: RobotoRegular; src: url('Fonts/OpenSans-Regular.ttf')}
-
-.header{
-  position: relative;
-  background-color: white;
-
-  padding-top: 40px;
-  padding-right: 7vw;
-  margin-left: 7vw;
-  padding-bottom: 2vh;
-
-  font-size: 1.2vw;
-  font-family: RobotoBold;
-  color: black;
-
-  height: auto;
-}
-
-.header a{
-  text-decoration: none;
-  color: black;
-  font-size: 1.5vw;
-}
-
-.name{
-  display: inline-block;
-  text-align: left;
-  width: 30vw;
-  padding-top: 10px;
-}
-
-.name h1{
-  letter-spacing: .45vw;
-
-  font-family: RobotoBlack;
-  font-weight: normal;
-  font-size: 3vw;
-
-  color: #000080;
-  margin: 0;
-}
-
-.name h3{
-  letter-spacing: .4vw;
-  font-size: 1vw;
-  color: black;
-  margin: 0;
-}
-
-
-.resume{
-  display: inline-block;
-  float: right;
-
-  letter-spacing: 2px;
-  margin-top: 2vh;
-  padding: 1vw;
-}
-
-.contact{
-  display: inline-block;
-  float: right;
-
-  letter-spacing: 2px;
-  margin-right: 1.5vw;
-  margin-top: 2vh;
-  padding: 1vw;
-}
-
-.aboutme{
-  display: inline-block;
-  float: right;
-
-  letter-spacing: 2px;
-  margin-top: 2vh;
-  padding: 1vw;
-}
-
-p{
-  font-size: 20px;
-  margin-top: 1.5vh;
-  margin-bottom: 1.5vh;
-}
-
-ul{
-  font-size: 20px;
-}
-
-h1{
-  font-family: RobotoBlack;
-  font-size: 50px;
-}
-
-h3{
-  font-family: RobotoBold;
-  font-size: 30px;
-}
-
-img{
-  width: 90%;
-  margin-top: 1.5vh;
-  margin-bottom: 1.5vh;
-}
-
-.caption i{
-  color: white;
-  font-size: 100%;
-}
-
-.caption{
-  position: relative;
-  width: 100%;
-  height: 100;
-  text-align: center;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-}
-
-.bodytext{
-  color: black;
-  margin-bottom: 150px;
-  font-family: RobotoRegular;
-}
-
-.imgcontainer:hover .overlay {
-  height: 35%;
-  z-index: 5;
-}
-
-.videocontainer:hover .overlay{
-  height: 35%;
-  z-index: 5;
-}
-
-.grounded{
-  width: 100%;
-  height: 100%;
-}
-
-.bookmark{
-  position: relative;
-  background-color: white;
-
-  height: auto;
-  text-align: left;
-
-  font-family: Roboto;
-  color: black;
-
-  padding-top: 25px;
-  padding-bottom: 25px;
-  margin-left: 40px;
-
-  font-size: 25px;
-}
-
-.bookmark a{
-  color: black;
-}
-
-.wrap{
-  width: 70%;
-  position: absolute;
-  left: 15%;
-}
-
-.alignleft{
-  float: left;
-  width: 33.33%;
-  text-align: left;
-}
-
-.aligncenter{
-  float: left;
-  width: 33.33%;
-  text-align: center;
-}
-
-.alignright{
-  float: left;
-  width: 33.33%;
-  text-align: right;
-}
-
-.footer{
-  font-family: RobotoBold;
-  font-size: 2vw;
-
-  height: 12vh;
-}
-
-.footer a{
-  text-decoration: none;
-  color: #000080;
-}
-
-</style>
-
-
+<link rel="stylesheet" href="stylesheet_page.css">
 </head>
 
 <body>
   <div class="header">
     <div class="name">
       <a href="index.html" target="_self">
-      <h1>HOWARD PARK</h1>
-      <h3>GAME DEVELOPMENT PORTFOLIO</h3>
+        <h1>HOWARD PARK</h1>
+        <h3>GAME DEVELOPMENT PORTFOLIO</h3>
       </a>
     </div>
     <div class="contact"><a href="mailto:howard.park@nyu.edu" target="_self">CONTACT</a></div>
@@ -231,36 +23,38 @@ img{
   <div class="wrap">
     <div class="bodytext">
       <div class="caption" style="margin-top: 2vh; margin-bottom: 0;">
-        <img src="Grounded/Grounded2.bmp"></img>
+        <img src="Grounded/Grounded.bmp"></img>
         <div style="position: absolute; left: 15%; width: 70%; bottom: 15%;">
           <i>Dreamlike menu scene teaching players how to grab and move objects,
             the main mechanic used throughout all puzzles. Doing so will start the game.</i>
         </div>
       </div>
 
-      <h1 style="display: inline-block; text-align: left">Overview</h1>
-      <p style="display: inline-block; margin-top: 55px; float: right;"><i><b>Engine:</b> Unity (PC), VRTK&nbsp&nbsp&nbsp&nbsp<b>Responsibilities:</b> Programming, Puzzle/Level Design</i></p>
+      <div style="width: 100%">
+        <h1 style="margin-top: 0; margin-bottom: 0px;">Overview
+          <p style="margin: 0;"><i><b style="color:green">Engine:</b> Unity VRTK <br><b style="color: red">Responsibilities:</b> Programming, Puzzle/Level Design</i></p>
+        </h1>
+      </div>
 
-      <p>"Grounded" is a virtual reality puzzle game where players are in the shoes of an old, amnesiac farmer who awakens to an audio
-        log of himself explaining the existence of a runaway experiment. Rediscovering the possessions of his now unfamiliar home, the
-        farmer realizes he is trapped and that the only way out is by solving a series of puzzles origianlly designed to contain the beast
-        that is now lurking somewhere near him.
+      <p>"Grounded" is a cryptic VR puzzle game where you play as an amnesiac scientist attempting to piece together lost memories of his "great experiment" while
+        following instructions from his past self through phonograph recordings. Set in the rural Americas in the 50's, "Grounded" has players scrambling
+        through a now unfamiliar home, discovering clues that only make the situation more ominous.
       </p>
 
       <div class="caption">
         <img src="Grounded/Bedroom.png" style="margin: 0"></img>
         <div style="position: absolute; left: 15%; width: 70%; bottom: 8%;">
-          <i>Players spawn next to a phonograph that automatically plays the first audio log.
-            Audio logs can be replayed if grabbed and reinserted <br>(Objects in picture are lighter than they appear).</i>
+          <i>You awaken to a distorted audio log of an unfamiliar voice. Nothing he says seem to make sense. <br>Yet, he asks you to listen carefully.</i>
         </div>
       </div>
 
       <p>
-        The project was developed over the course of two months with a friend, who focused on asset building and modeling while I handled programming
-        the mechanics, event triggers, and object interactions. We chose virtual reality as the optimal medium for immersing our audience to
-        environmental storytelling, which complemented our desire to implement a more hands-on approach to our puzzles.
+        Developed in a two-man passion project, <i>Grounded's</i> objective was our first exploration in combining VR with storytelling.
+        We enjoyed the immersive potential VR had to offer and we had a lot of fun staging the puzzles and environments together in a way where
+        it truly felt you were there.
       </p>
 
+<!--
       <h1>Controls</h1>
 
       <p>
@@ -270,48 +64,83 @@ img{
         <br>
       </p>
       <i>Note: These are controls we used for the Oculus Rift and may not translate to every platform.</i>
+-->
 
-      <h1>Puzzle Design</h1>
+      <h1>Puzzle and Level Design</h1>
 
       <p>
-        Four puzzles
-        exist in the game and each represent a chapter in the story as completing one rewards players with audio logs or clues
+        There are four puzzles our forgetful scientist had designed to bring back his memories using audio logs scattered around the map.
+        <br>
+        One of them, as seen from the image below, is a painting that is broken into squares that are scattered around the room, some of them
+        requiring the player to open them with a separate lock puzzle or requires further guidance from the audio logs. Solving the paintings
+        displays a series of numbers that is used to solve the padlock.
+      </p>
+
+<!--
+      <p>
+        Four puzzles exist in the game and each represent a chapter in the story as completing one rewards players with audio logs or clues
         for the next one. When players are not solving puzzles, they are discovering narrative artifacts placed all around
         the level to give them a better understanding of what is happening around them. Finding this balance between open-world exploration and
         narrative progress was an essential feat for development and definitely gave us a stronger understanding of our players
         through weekly playtest sessions.
-      </p>
 
-      <p>
         Designing the puzzles was the most strenuous task as we were juggling the balance of effective puzzle design and a narrative
         that seamlessly follows that progression. We designed various events to trigger depending on which puzzle was solved to
         visually and audibly cue narrative progression to the player. Because we were constrained to work with a linear story, we
         had to work around players accidentally solving certain puzzles out of order by placing significant puzzle fragments in areas
         where it would be impossible to discover earlier.
       </p>
+    -->
 
       <div class="caption">
         <img src="Grounded/Wheelpuzzle.png" style="margin: 0"></img>
         <div style="position: absolute; left: 15%; width: 70%; bottom: 8%;">
-          <i>Wheel Combination Lock</i>
+          <i>A putrid smell excuding from the door distracted me from a beautiful painting hung beside it. <br>I feel it calling me to open it.</i>
         </div>
       </div>
 
+<!--
       <p>
         For the "Padlock + Painting" puzzle, for example, paintings were scattered
         all around the house, each with a hidden number that spell out a combination for a lock on a door when put together. Unlocking
         this door triggers a climactic point in the story, so we had two of the paintings locked away in a room that gets unlocked from
-        an earlier puzzle to prevent players from missing the gradual narrative progression. Several red herrings were also placed to
-        make finding this correlation rather difficult. This didn't solve the problem of players just going through every single
-        combination on the padlock to eventually unlock it and we left it that way for a good reason.
+        an earlier puzzle. Several red herrings were also placed to make finding this correlation rather difficult. This didn't solve
+        the problem of players just going through every single combination on the padlock to eventually unlock it and we left it that way
+        for a good reason.
+      </p>
+-->
+
+      <p>
+        For this project, my main role was programming the whole game which includes all of the puzzles, VR interactions, and
+        animated sequences.
+
+        <br>
+        <br>
+
+        The most important lesson we learned from making this game was user feedback and iterative design tweaking.
+        Players were, at first, disoriented by the simple house design and weren't sure where to go next. The house was also too large
+        so it prolonged gameplay as well as newer player's motion sickness. Certain objects would seem interactable but are not. And, overall,
+        the narrative wasn't well understood because sometimes the puzzles were too hard and pulled them out of the story.
+
+        <br>
+        <br>
+
+        As my first puzzle game, it was truly a humbling experience and I had a lot of fun addressing a lot of these issues and eventually
+        creating a game that we and the users were eventually proud of.
+
+        <br>
+
+        Although puzzle games are not my passion, what I want to convey through this project was that I'm always willing to try new things
+        and am obsessed with narrative.
       </p>
 
       <div style="width: 100%; height: 100%; text-align: center; margin-top: 5vh; margin-bottom: 5vh;">
         <img src="Grounded/MapViewInGame.png" style="width: 50%; display: inline-block; float: left"></img>
         <img src="Grounded/MapView.png" style="width: 50%; display: inline-block"></img>
-        <i style="font-size: 18px;">SPOILER: Side by side map view of all puzzles and puzzle pieces, each color-coded to their puzzle</i>
+        <!--i style="font-size: 18px;">SPOILER: Side by side map view of all puzzles and puzzle pieces, each color-coded to their puzzle</i-->
       </div>
 
+<!--
       <p>
         If you carefully observe where each puzzle's pieces are placed in the map, you will notice that no matter where you path, there is
         always enough information to tease the existence of a puzzle but not enough to offer a viable solution. Solving the padlock first
@@ -323,14 +152,16 @@ img{
         it out, not to those who "found the key" or "found the book". Placing a key on the table to a lock in front of is not a satisfying puzzle,
         but using a padlock of numbers you pieced together from a series of unusually similar paintings is.
       </p>
+    -->
 
       <div class="caption">
         <img src="Grounded/AllPaintings.png" style="margin: 0"></img>
-        <div style="position: absolute; left: 15%; width: 70%; bottom: 8%;">
-          <i>Paintings (including red herrings) placed around the house</i>
-        </div>
+        <!--div style="position: absolute; left: 15%; width: 70%; bottom: 8%;">
+          <i>Relevant paintings to solving puzzles</i>
+        </div-->
       </div>
 
+<!--
       <h1>Narrative Approach</h1>
 
       <p>
@@ -376,6 +207,13 @@ img{
       <div class="aligncenter"><a href="#top" style="color: #000080; text-decoration: none">TOP</a></div>
       <div class="alignright"><a href="hrmdvr.html">NEXT</a></div>
     </div>
+    -->
+  </div>
+
+  <div class="footer">
+    <div class="alignleft"><a href="prophecyschosen.html">PREVIOUS</a></div>
+    <div class="aligncenter"><a href="#top">TOP</a></div>
+    <div class="alignright"><a href="tandononline.html">NEXT</a></div>
   </div>
 
 </body>

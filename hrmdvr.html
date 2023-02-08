@@ -4,177 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
   <title id="title">HRMD VR</title>
-<style>
-
-body{
-  margin: 0;
-  padding: 0;
-	background-color: white;
-}
-
-img{
-  width: 90%;
-  object-fit: fill;
-}
-
-  @font-face { font-family: RobotoBlack; src: url('Fonts/OpenSans-Bold.ttf')}
-  @font-face { font-family: RobotoBold; src: url('Fonts/OpenSans-SemiBold.ttf')}
-  @font-face { font-family: RobotoRegular; src: url('Fonts/OpenSans-Regular.ttf')}
-
-.header{
-  position: relative;
-  background-color: white;
-
-  padding-top: 40px;
-  padding-right: 7vw;
-  margin-left: 7vw;
-  padding-bottom: 2vh;
-
-  font-size: 1.2vw;
-  font-family: RobotoBold;
-  color: black;
-
-  height: auto;
-}
-
-.header a{
-  text-decoration: none;
-  color: black;
-  font-size: 1.5vw;
-}
-
-.name{
-  display: inline-block;
-  text-align: left;
-  width: 30vw;
-  padding-top: 10px;
-}
-
-.name h1{
-  letter-spacing: .45vw;
-
-  font-family: RobotoBlack;
-  font-weight: normal;
-  font-size: 3vw;
-
-  color: #000080;
-  margin: 0;
-}
-
-.name h3{
-  letter-spacing: .4vw;
-  font-size: 1vw;
-  color: black;
-  margin: 0;
-}
-
-
-.resume{
-  display: inline-block;
-  float: right;
-
-  letter-spacing: 2px;
-  margin-top: 2vh;
-  padding: 1vw;
-}
-
-.contact{
-  display: inline-block;
-  float: right;
-
-  letter-spacing: 2px;
-  margin-right: 1.5vw;
-  margin-top: 2vh;
-  padding: 1vw;
-}
-
-.aboutme{
-  display: inline-block;
-  float: right;
-
-  letter-spacing: 2px;
-  margin-top: 2vh;
-  padding: 1vw;
-}
-
-p{
-  font-size: 20px;
-  margin-bottom: 3vh;
-}
-
-ul{
-  font-size: 20px;
-}
-
-h1{
-  font-family: RobotoBlack;
-  font-size: 50px;
-}
-
-h3{
-  font-family: RobotoBold;
-  font-size: 30px;
-}
-
-.bodytext{
-  color: black;
-  margin-bottom: 150px;
-  font-family: RobotoRegular;
-}
-
-.wrap{
-  width: 70%;
-  position: absolute;
-  left: 15%;
-}
-
-.alignleft{
-  float: left;
-  width: 33.33%;
-  text-align: left;
-}
-
-.aligncenter{
-  float: left;
-  width: 33.33%;
-  text-align: center;
-}
-
-.alignright{
-  float: left;
-  width: 33.33%;
-  text-align: right;
-}
-
-.footer{
-  font-family: RobotoBold;
-  font-size: 2vw;
-
-  height: 12vh;
-}
-
-.footer a{
-  text-decoration: none;
-  color: #000080;
-}
-
-.caption i{
-  color: white;
-  font-size: 100%;
-}
-
-.caption{
-  position: relative;
-  width: 100%;
-  height: 100;
-  text-align: center;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-}
-
-</style>
-
-
+<link rel="stylesheet" href="stylesheet_page.css">
 </head>
 
 <body>
@@ -198,8 +28,12 @@ h3{
           <i>Each room has a puzzle that, once solved, opens its doors to another one. Here in Puzzle 1 your objective is to: Find the key code. </i>
         </div>
       </div>
-      <h1 style="display: inline-block; text-align: left">Overview</h1>
-      <p style="display: inline-block; margin-top: 60px; float: right"><i><b>Engine:</b> Unity (PC), VRTK&nbsp&nbsp&nbsp&nbsp<b>Responsibilities: </b>Programming, Puzzle/Level Design</i></p>
+      
+      <div style="width: 100%">
+        <h1 style="margin-top: 0; margin-bottom: 0px;">Overview
+          <p style="margin: 0;"><i><b style="color:green">Engine:</b> Unity + VRTK <br><b style="color: red">Responsibilities:</b> Programming, Puzzle/Level Design</i></p>
+        </h1>
+      </div>
 
       <p>
         "HRMD VR" is a virtual reality puzzle game, where you traverse through a series of rooms solving puzzles to escape a containtment facility.
@@ -234,9 +68,9 @@ h3{
       <h1>Why VR?</h1>
 
       <p>
-        Unlike <a style="font-family: RobotoBold" href="grounded.html">"Grounded"</a>, this project was not binded to any theme or structure as
+        Unlike <a href="grounded.html">"Grounded"</a>, this project was not binded to any theme or structure as
         we were to simply "make a game for our final". Initially, I wanted to work on a sidescroller game similar to
-        <a style="font-family: RobotoBold" href="aroundthehouse.html">"Around the House"</a> until my partner opened up the idea of
+        <a href="aroundthehouse.html">"Around the House"</a> until my partner opened up the idea of
         virtual reality. Though his appeal was aimed towards a more immersive, environmental narrative aesthetic, I was more intrigued
         by how the simulation of the players' hands provided more control of their surroundings. And so, we designed the game to take full
         advantage of this by having players scrounging through tables and boxes for clues, pressing numbers on a keypad, inserting objects into a
@@ -253,8 +87,8 @@ h3{
       <h1>"Keep It Simple Stupid"</h1>
 
       <p>
-        <b>The "alchemy mechanic" was actually not a thing until it was improvised as a solution to the dumbest problem
-        I've ever faced.</b> My partner had designed the level to have a realistically dark and creepy appearance, so he wanted a flashlight to
+        The "alchemy mechanic" was actually not a thing until it was improvised as a solution to the dumbest problem
+        I've ever faced. My partner had designed the level to have a realistically dark and creepy appearance, so he wanted a flashlight to
         accommodate it. I figured, given its importance, the flashlight would make a great tutorial for teaching the player the basic controls
         of grabbing and manipulating objects. For grabbing, the flashlight would glow when the player reaches for it. For getting the actual
         flashlight to turn on, a battery was placed next to it as an affordance to put it inside, which I could not get to work for several
@@ -263,7 +97,7 @@ h3{
         bring both hands together, trigger a blinding light, and spawn a lit flashlight on the right hand. You can probably guess what the point
         of the light was. It was realized to be a defeated attempt at first, but was later became one of the more exciting mechanics to the game.
         It triggered playtesters to make that association every time two objects were held which were met by disappointment when the lights would
-        not turn on when they did. I did learn later that the <a style="font-family: RobotoBold;" href="https://vrtoolkit.readme.io/">Virtual Reality Toolkit (VRTK)</a>
+        not turn on when they did. I did learn later that the <a href="https://vrtoolkit.readme.io/">Virtual Reality Toolkit (VRTK)</a>
         I was using did have a solution to my problem, but decided that "alchemy" was worth the trouble as it was later deepened and extended
         to future puzzles.
       </p>
@@ -283,7 +117,7 @@ h3{
         points retrieved from the headset and the controllers live. This made debugging considerably more difficult as recreating certain defects
         became inconsistent. Frame drops also frequently occurred when rendering models with more detail and polygons, which is normal, but
         affected collision calculation as sometimes the player would teleport or run their hands through walls or objects. These were the same
-        problems we had with <a style="font-family: RobotoBold" href="grounded.html">"Grounded"</a>, where we took more measures to improve
+        problems we had with <a href="grounded.html">"Grounded"</a>, where we took more measures to improve
         performance by being more considerate of file size, scripting triggers for seamless load times, and utilizing Unity's Profiler Window.
       </p>
 
@@ -298,7 +132,7 @@ h3{
 
     <div class="footer">
       <div class="alignleft"><a href="grounded.html">PREVIOUS</a></div>
-      <div class="aligncenter"><a href="#top" style="color: #000080; text-decoration: none">TOP</a></div>
+      <div class="aligncenter"><a href="#top">TOP</a></div>
       <div class="alignright"><a href="tandononline.html">NEXT</a></div>
     </div>
   </div>
