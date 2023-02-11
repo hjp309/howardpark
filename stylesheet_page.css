@@ -104,6 +104,30 @@ video {
   background-color: black;
 }
 
+.iconholder{
+  width: auto;
+  height: auto;
+  display: table-row;
+  vertical-align: middle;
+  border-collapse: separate;
+  border-spacing: 30px;
+}
+
+.icon {
+  width: 75px;
+  height: 75px;
+  display: table-cell;
+  vertical-align: top;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+
+.icontext {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .alignleft{
   float: left;
   width: 33.33%;
