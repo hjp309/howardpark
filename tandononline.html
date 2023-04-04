@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title id="title">Tandon Online</title>
 <link rel="stylesheet" href="stylesheet_page.css">
+<script src="js/jquery-3.6.4.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -20,6 +22,14 @@
     <div class="aboutme"><a href="aboutme.html" target="_self">ABOUT ME</a></div>
   </div>
 
+  <div class="sidebar" style="left: 0;" onclick="previousPage()">
+    <a>PREVIOUS</a>
+  </div>
+
+  <div class="sidebar" style="right: 0;" onclick="nextPage()">
+    <a>NEXT</a>
+  </div>
+
   <div class="wrap">
     <div class="bodytext">
       <div class="caption" style="margin-top: 2vh; margin-bottom: 0;">
@@ -28,7 +38,7 @@
 
       <div style="width: 100%">
         <h1 style="margin-top: 0; margin-bottom: 0px;">Overview
-          <p style="margin: 0;"><i><b style="color:green">Engine:</b> Unity <br><b style="color: red">Responsibilities:</b> Programming, Puzzle/Level Design</i></p>
+          <p style="margin: 0;"><i><b style="color:green">Engine:</b> Unity <br><b style="color: red">Responsibilities:</b> Full Development</i></p>
         </h1>
       </div>
 
@@ -149,11 +159,7 @@
 
     </div>
 
-    <div class="footer">
-      <div class="alignleft"><a href="hrmdvr.html">PREVIOUS</a></div>
-      <div class="aligncenter"><a href="#top">TOP</a></div>
-      <div class="alignright">&nbsp</div>
-    </div>
+    <div class="top"><a href="#top">TOP</a></div>
   </div>
 
 </body>

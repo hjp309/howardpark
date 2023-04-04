@@ -15,11 +15,6 @@
   font-size: 25px;
 }
 
-::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
-}
-
 .overlay {
   position: absolute;
   bottom: 0;
@@ -74,4 +69,16 @@ video{
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+/* Body > Header */
+h1{
+  font-family: HeaderFont;
+  font-size: 50px;
+}
+
+/* Body > Subheader  */
+h3{
+  font-family: SubheaderFont;
+  font-size: 30px;
 }

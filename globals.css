@@ -16,9 +16,14 @@ body{
 	background-color: var(--backgroundColor);
 }
 
+/* Hide scroll wheel */
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
 /* Header */
 .header{
-  position: relative;
   background-color: var(--backgroundColor);
 
   padding-top: 40px;
@@ -120,10 +125,4 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-}
-
-.wrap{
-  width: 80%;
-  position: absolute;
-  left: 10%;
 }

@@ -128,35 +128,39 @@ video {
   vertical-align: middle;
 }
 
-.alignleft{
-  float: left;
-  width: 33.33%;
-  text-align: left;
-}
-
-.aligncenter{
-  float: left;
-  width: 33.33%;
+.top{
   text-align: center;
+  margin-bottom: 100px;
 }
 
-.alignright{
-  float: left;
-  width: 33.33%;
-  text-align: right;
-}
-
-.footer{
-  font-family: RobotoBold;
-  font-size: 2vw;
-
-  height: 12vh;
-}
-
-.footer a{
+.top a{
   text-decoration: none;
   font-family: SubHeaderFont;
   color: var(--linkColor);
+}
+
+.wrap{
+  width: 80%;
+  position: absolute;
+  left: 10%;
+}
+
+.sidebar{
+  position: fixed;
+  top: 90%;
+  margin: auto;
+  width: 10%;
+  height: 50%;
+  transform: translate(0%,-50%);
+  text-align: center;
+  font-family: SubHeaderFont;
+
+  display: table;
+}
+
+.sidebar a{
+  display: table-cell;
+  vertical-align: middle;
 }
 
 strike{
